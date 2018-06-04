@@ -20,11 +20,73 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 print("create an new tildy")
 ```
-fnknfv
-
-
- 
+ so from here we will do all the codes and answer of introduction to statistical learning and push this to git
+ first basic vector creation ,and other basic programing
+ vector are being created in R using c()
 ```{r}
+a=c(1,2,3,4,4)
+b=c(23,32,1,2,12)
+print(a+b)
+```
+ls()commmond will giveyou total no of object oresent 
+```{r}
+ls()
+```
+now here it being showing more objects as i was working ib nire thing before
+```{r}
+library(dplyr)
+library(ggplot2)
+library(statsr)
+```
+
+```{r}
+app=rnorm(100)
+app1=rnorm(100)
+a=data_frame(app,app1)
+ggplot(data = a,aes(x=app,y=app1))+geom_point()+theme_bw()+xlab("randaom")+ylab("random y axis")
+
+```
+```{r}
+pdf("figure.pdf")
+ggplot(data=a,aes(x=app,y=app1))+geom_point()
+dev.off()
+```
+```{r}
+as=seq(1,23,length=10)
+as
+
+```
+seq function can also be used to make a list or vactor of 10 element in the range of [1,23]
+
+```{r}
+Auto=read.csv("Auto.csv",na.strings = "?")
+fix(Auto)
+dim(Auto)
+Auto=na.omit(Auto)
 
 ```
 
+```{r}
+dim(Auto)
+```
+
+as you can see we had just  omiited all those data which have missing value so the no of observation get reduced its good to ommit only when we are not having to much say (10% ) data removed
+```{r}
+names(Auto)
+```
+names function give us the name of all these coloumns 
+
+```{r}
+library(ggplot2)
+plot1=ggplot(data = Auto,aes(x=cylinders,y=mpg))+geom_point()+xlab("No of cylinders")+ylab("Milage")
+library(plotly)
+ggplotly(plot1)
+```
+as we can see that milage is getting decreased as the no. of cylinders in an vechilee is increasing lets see the correlation between them
+
+
+```{r}
+cor(Auto$mpg,Auto$cylinders)
+```
+
+as we can see that there is a very strong correlation between the no of cylinders and the milage of the veichles
