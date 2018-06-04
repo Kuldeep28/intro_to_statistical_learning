@@ -90,3 +90,27 @@ cor(Auto$mpg,Auto$cylinders)
 ```
 
 as we can see that there is a very strong correlation between the no of cylinders and the milage of the veichles
+also since there are only limited no of element or discrete values the no off cylinders can take so can be make categorial
+cylinders=as.fator(cylinders)
+```{r}
+Auto$cylinders=as.factor(Auto$cylinders)
+```
+
+```{r}
+ggplot(data=Auto,aes(x=cylinders,y=mpg))+geom_boxplot()+theme_gray()
+```
+here after making cylinder categorical we can use it to make a categorical plot and also keep in mind that for boxplot we need a categorical and one numerical data
+```{r}
+pairs(Auto)
+```
+this fuction give us basic knowledege that where all the things are being going '
+```{r}
+pairs(~ Auto$mpg + Auto$displacement+Auto$horsepower)
+plot(log(Auto$mpg),Auto$displacement)
+```
+
+here we can see that mpg and displacement curse is something like exponrential so making a log make it a straight line so that we can easily use linear regression but there is chances that we increase baysin in it
+```{r}
+
+```
+
