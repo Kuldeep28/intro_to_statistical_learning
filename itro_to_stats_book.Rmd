@@ -108,17 +108,23 @@ this function give us basic knowledge that where all the things are being going 
 pairs(~ Auto$mpg + Auto$displacement+Auto$horsepower)
 plot(log(Auto$mpg),Auto$displacement)
 ```
+- '~/spark/spark-2.3.0-bin-hadoop2.7'
 
 here we can see that mpg and displacement curse is something like exponential so making a log make it a straight line so that we can easily use linear regression but there is chances that we increase Bayesian in it
 ```{r}
-identify(Auto$mpg,Auto$horsepower,Auto$mpg)
+identify(Auto$mpg,Auto$horsepower,Auto$displacement)
 ```
 
 not getting that how to use this identity function
 
 now lets get the summary of the whole data set to get it moving all right and keep it moving like all 
 ```{r}
-summary(Auto)dss
+summary(Auto)
+
+```
+
+```{r}
+savehistory()
 
 ```
 
