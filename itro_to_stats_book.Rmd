@@ -21,18 +21,18 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 print("create an new tildy")
 ```
  so from here we will do all the codes and answer of introduction to statistical learning and push this to git
- first basic vector creation ,and other basic programing
+ first basic vector creation ,and other basic programming
  vector are being created in R using c()
 ```{r}
 a=c(1,2,3,4,4)
 b=c(23,32,1,2,12)
 print(a+b)
 ```
-ls()commmond will giveyou total no of object oresent 
+ls()command will give you total no of object present 
 ```{r}
 ls()
 ```
-now here it being showing more objects as i was working ib nire thing before
+now here it being showing more objects as i was working bi nine thing before
 ```{r}
 library(dplyr)
 library(ggplot2)
@@ -56,7 +56,7 @@ as=seq(1,23,length=10)
 as
 
 ```
-seq function can also be used to make a list or vactor of 10 element in the range of [1,23]
+seq function can also be used to make a list or vector of 10 element in the range of [1,23]
 
 ```{r}
 Auto=read.csv("Auto.csv",na.strings = "?")
@@ -70,11 +70,11 @@ Auto=na.omit(Auto)
 dim(Auto)
 ```
 
-as you can see we had just  omiited all those data which have missing value so the no of observation get reduced its good to ommit only when we are not having to much say (10% ) data removed
+as you can see we had just  omitted all those data which have missing value so the no of observation get reduced its good to omit only when we are not having to much say (10% ) data removed
 ```{r}
 names(Auto)
 ```
-names function give us the name of all these coloumns 
+names function give us the name of all these columns 
 
 ```{r}
 library(ggplot2)
@@ -82,16 +82,16 @@ plot1=ggplot(data = Auto,aes(x=cylinders,y=mpg))+geom_point()+xlab("No of cylind
 library(plotly)
 ggplotly(plot1)
 ```
-as we can see that milage is getting decreased as the no. of cylinders in an vechilee is increasing lets see the correlation between them
+as we can see that mileage is getting decreased as the no. of cylinders in an vechile is increasing lets see the correlation between them
 
 
 ```{r}
 cor(Auto$mpg,Auto$cylinders)
 ```
 
-as we can see that there is a very strong correlation between the no of cylinders and the milage of the veichles
-also since there are only limited no of element or discrete values the no off cylinders can take so can be make categorial
-cylinders=as.fator(cylinders)
+as we can see that there is a very strong correlation between the no of cylinders and the mileage of the vehicles
+also since there are only limited no of element or discrete values the no off cylinders can take so can be make categorical
+cylinders=as.factor(cylinders)
 ```{r}
 Auto$cylinders=as.factor(Auto$cylinders)
 ```
@@ -99,18 +99,26 @@ Auto$cylinders=as.factor(Auto$cylinders)
 ```{r}
 ggplot(data=Auto,aes(x=cylinders,y=mpg))+geom_boxplot()+theme_gray()
 ```
-here after making cylinder categorical we can use it to make a categorical plot and also keep in mind that for boxplot we need a categorical and one numerical data
+here after making cylinder categorical we can use it to make a categorical plot and also keep in mind that for box plot we need a categorical and one numerical data
 ```{r}
 pairs(Auto)
 ```
-this fuction give us basic knowledege that where all the things are being going '
+this function give us basic knowledge that where all the things are being going '
 ```{r}
 pairs(~ Auto$mpg + Auto$displacement+Auto$horsepower)
 plot(log(Auto$mpg),Auto$displacement)
 ```
 
-here we can see that mpg and displacement curse is something like exponrential so making a log make it a straight line so that we can easily use linear regression but there is chances that we increase baysin in it
+here we can see that mpg and displacement curse is something like exponential so making a log make it a straight line so that we can easily use linear regression but there is chances that we increase Bayesian in it
 ```{r}
+identify(Auto$mpg,Auto$horsepower,Auto$mpg)
+```
+
+not getting that how to use this identity function
+
+now lets get the summary of the whole data set to get it moving all right and keep it moving like all 
+```{r}
+summary(Auto)dss
 
 ```
 
