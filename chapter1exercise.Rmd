@@ -130,4 +130,22 @@ bp=ggplot(data = college,aes(x=Accept))+geom_histogram()
 multiplot(ap,bp,col=2)
 ```
 
+now we are going to explore boston data 
+and use to corr function to make correlation between the elements
+```{r}
+library(MASS)
+```
+
+```{r}
+Boston
+
+```
+
+now we will make pair wise scatter plot 
+to find relation between difrrent elemnt
+
+```{r}
+?Boston
+ggplot(data = Boston,aes(x=ptratio,y=crim))+geom_point()
+```
 
