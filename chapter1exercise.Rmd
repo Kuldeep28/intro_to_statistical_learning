@@ -1,0 +1,133 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r message=FALSE}
+library(dplyr);library(purrr);library(ggplot2);library(stats4)
+college=read.csv("College.csv")
+```
+once we have done all and loaded the data college
+now we are ready to do our data science stuff and be ready to get some useful insights
+```{r}
+names(college)
+
+summary(college)
+
+rownames(college)=college[,1]
+```
+we had just make colomn names as they are more handy to use and keep in mindd keep going
+now we are going to do , reoving th o1 column of the data frame
+```{r}
+college=college[,-1]
+```
+now  we have removed the first column of our data frame and had give  the name to the rows the university names
+once we have done this we are ready to some plty thing with ggplot
+```{r}
+pairs(college[,1:3])
+```
+now maing  a new coloumns and adding it to the college data frame
+```{r}
+names(college)
+```
+
+```{r}
+Elite=rep("No",nrow(college))
+Elite[college$Top10perc>50]="Yes"
+Elite=as.factor(Elite)
+college=data.frame(college,Elite)
+```
+
+
+
+
+```{r}
+ggplot(data=college,aes(x=Elite,y=Outstate))+geom_boxplot()
+college=college[,-ncol(college)]
+View(college)
+```
+```{r}
+college[,c("Elite","Elite.1","Elite.2","Elite.3")] <- list(NULL)
+colnames(college)
+```
+```{r}
+Elite=rep("No",nrow(college))
+Elite[college$Top10perc>50]="Yes"
+Elite=as.factor(Elite)
+college=data.frame(college,Elite)
+```
+
+```{r}
+ggplot(data = college,aes(x=Elite,y=Outstate))+geom_boxplot()
+```
+```{r}
+# Multiple plot function
+#
+# ggplot objects can be passed in ..., or to plotlist (as a list of ggplot objects)
+# - cols:   Number of columns in layout
+# - layout: A matrix specifying the layout. If present, 'cols' is ignored.
+#
+# If the layout is something like matrix(c(1,2,3,3), nrow=2, byrow=TRUE),
+# then plot 1 will go in the upper left, 2 will go in the upper right, and
+# 3 will go all the way across the bottom.
+#
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+  library(grid)
+
+  # Make a list from the ... arguments and plotlist
+  plots <- c(list(...), plotlist)
+
+  numPlots = length(plots)
+
+  # If layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    # Make the panel
+    # ncol: Number of columns of plots
+    # nrow: Number of rows needed, calculated from # of cols
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
+                    ncol = cols, nrow = ceiling(numPlots/cols))
+  }
+
+ if (numPlots==1) {
+    print(plots[[1]])
+
+  } else {
+    # Set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+
+    # Make each plot, in the correct location
+    for (i in 1:numPlots) {
+      # Get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
+}
+```
+
+
+now making miltiple graphs in the same window
+```{r}
+par(mfrow=c(2,2))
+ap=ggplot(data = college,aes(x=Apps,colours=factor(Elite)))+geom_histogram( )
+bp=ggplot(data = college,aes(x=Accept))+geom_histogram()
+multiplot(ap,bp,col=2)
+```
+
+
