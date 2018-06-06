@@ -1,0 +1,7 @@
+"0","call_stup=function()"
+"0","  library(dplyr);library(ISLR);library(ggplot2);library(MASS)"
+"0","call_stup"
+"1","function()
+"
+"1","  library(dplyr)
+"
