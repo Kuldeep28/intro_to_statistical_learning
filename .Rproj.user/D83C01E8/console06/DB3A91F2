@@ -1,0 +1,4 @@
+plot(lm.fit)
+]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ plot(lm.fit)
+bash: syntax error near unexpected token `lm.fit'
+]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ [K]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ 
