@@ -44,6 +44,9 @@ lm.fit=lm(medv~lstat,data=Boston)
 attach(Boston)
 lm.fit=lm(medv~lstat)
 summary(lm.fit)
+
+print("\n")
+names(lm.fit)
 ```
 ```{r}
 ggplot(data = Boston,aes(x=lstat,y=medv))+geom_point()+geom_smooth(method = "lm")
@@ -60,4 +63,104 @@ plot(lm.fit)
 
 
 ```
+
+abline(intercept.slope)can be used to draw any kind of line 
+lwd no cam be tto determine the width of the functions
+pch can be used to draw diffrent pattern to the graphs
+par(mfrow=c(2,2)) function can be used to create a 2*2 matrix so that we can fit 4 graphs at the same time
+
+```{r}
+predict (lm.fit , data.frame ( lstat =c (5 ,10 ,15) ),
+interval ="prediction")
+
+predict(lm.fit,data.frame(lstat=c(5,10,15)),
+        interval = "confidence")
+```
+
+now we can also find the levarage values of these mpodel using hatvalues()
+
+```{r}
+plot(hatvalues(lm.fit))
+
+print("\n")
+which.max(hatvalues(lm.fit))
+plot(Boston$lstat,Boston$medv)
+```
+the which.max() can be used to find the max value index in the given vector
+#Moving to multiple linear regression
+now we will use lm(mdev~lstat+p2+p3+p4.....+pn)
+so that we can regerse in y over these n variables
+```{r}
+
+lm.fit=lm(medv~lstat+age,data=Boston)
+summary(lm.fit)
+```
+now we are going to add all the prdictors in the same model
+so that we can anlysi that which predicator is affecting our concerned output
+```{r}
+lm.fit=lm(medv~.,data=Boston)
+summary(lm.fit)
+```
+
+```{r}
+library(car)
+```
+
+```{r}
+vif(lm.fit)
+```
+now we will remove the predicators having high p valuers from the model and see there effect
+```{r}
+lm.fit1=lm(medv~.-age-indus,data=Boston)
+summary(lm.fit1)
+
+```
+so from here we can say that in this manner we can remove the predicator having very low probaba
+can be removed and we can really add only the predicator which are more relevant 
+
+#Interaction term inclusion 
+now we will see that how e can use interaction term , so that our model more accuretly predict he variation in the dataset
+
+```{r}
+summary(lm(medv~lstat*age,data=Boston))
+```
+using pr1*pr2 will automatically insert the pr1,pr2,pr1:pr2 term in the mdel we can only insert the interacrion term using colon
+
+in the above exaple the p value associated with lstat:age is very hight so that we cant reject the null hypothesis
+#nonlinearn Transformation
+now we can also use non lineran or polynomial regression by making power  to the prediccators an
+usse function I() to wrapping the elements
+```{r}
+fit=lm(medv~lstat+I(lstat^2),data = Boston)
+summary(fit)
+anova(lm.fit,fit)
+```
+now we can clearly get that model with square term is far more superior thatwithout so 
+```{r}
+par(mfrow=c(2,2))
+plot(fit)
+```
+we can add into the model polynomial upto the a certainn degree using poly() function 
+```{r}
+fit2=lm(medv~poly(lstat,5),data = Boston)
+summary(fit2)
+```
+we can also use some form of transormation so that curve can became linear til some extent
+#dummay variable 
+for Qualitative we need dummy variable so that we can do our analysis on it 
+
+```{r}
+ficar=lm(Sales~.+Income:Advertising+ Price:Age,data = Carseats)
+summary(ficar)
+
+```
+
+```{r}
+attach(Carseats)
+contrasts(ShelveLoc)
+```
+
+the above output tell us that how the encoding is being done automaticllay in r 
+so that we can 
+
 

@@ -1,4 +1,68 @@
 plot(lm.fit)
 ]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ plot(lm.fit)
 bash: syntax error near unexpected token `lm.fit'
-]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ [K]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ 
+]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ [K]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ which.max(hatvalues(lm.fit))
+]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ which.max(hatvalues(lm.fit))
+bash: syntax error near unexpected token `hatvalues'
+git branch
+[?1h=  chapter2[m[m
+* [32mmaster[m[m
+[K[?1l>]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ git branchls[Kgit branch[K[K[K[K[K[Kadd[K[K[K[K sy[Ktatus
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rhistory[m
+	[31mmodified:   .Rproj.user/D83C01E8/console06/DB3A91F2[m
+	[31mmodified:   .Rproj.user/D83C01E8/console06/DB3A91F2.env[m
+	[31mmodified:   .Rproj.user/D83C01E8/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D83C01E8/sources/prop/D2D48060[m
+	[31mdeleted:    .Rproj.user/D83C01E8/sources/s-2D2B2673/FEFA46E5-contents[m
+	[31mdeleted:    .Rproj.user/D83C01E8/sources/s-2D2B2673/lock_file[m
+	[31mdeleted:    .Rproj.user/D83C01E8/sources/s-7D533E/1A0DF8BF-contents[m
+	[31mdeleted:    .Rproj.user/D83C01E8/sources/s-7D533E/lock_file[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000010.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000011.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000011.png[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000011.snapshot[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000012.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000013.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000013.png[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c00borc2cadxd/000013.snapshot[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c1p5r5p1kt69c/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7t47266bfkis/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/000008.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/000009.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/000009.png[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/000009.snapshot[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/00000a.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/00000b.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/00000b.png[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/c7x3kem8utxrj/00000b.snapshot[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/chunks.json[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000004.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000005.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000005.png[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000005.snapshot[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000006.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000007.metadata[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000007.png[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ci1snm0nyiulr/000007.snapshot[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/csetup_chunk/000002.csv[m
+	[31mdeleted:    .Rproj.user/shared/notebooks/56FE5F49-Chpter2intext/1/s/ctoncwy20tzls/000002.csv[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   Chpter2intext.Rmd[m
+	[31mmodified:   Chpter2intext.html[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m"intro_to_statistical_learning/Editing data_visulise_tk.rmd at master \302\267 Kuldeep28_data_visulise.html"[m
+	[31m"intro_to_statistical_learning/Editing data_visulise_tk.rmd at master \302\267 Kuldeep28_data_visulise_files/"[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;kuldeep@ed-rope:/media/kuldeep/seed2/islr]7;file://ed-rope/media/kuldeep/seed2/islr]0;kuldeep@ed-rope: /media/kuldeep/seed2/islr[01;32mkuldeep@ed-rope[00m:[01;34m/media/kuldeep/seed2/islr[00m$ git add .
